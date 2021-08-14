@@ -1,23 +1,48 @@
-.Rectangle-top {
-    width: device-width;
-    height: 40px;
-    background-color: #022737;
+
+@font-face { font-family: HelveticaNeue; 
+            src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed.ttf'); 
+            } 
+@font-face {
+  font-family: BerkeleyStd;
+  src: url(//Assets/BerkeleyStd-Book.otf);
+}
+/* @font-face { font-family: HelveticaNeue; font-weight: bold; src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed\ Bold.ttf');} */
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --background_color: #022737;
+  --white-two: whitesmoke;
+  --char-color: #505050;
+  --button: #006778;
+  --line: #006778;
+}
+
+
+body{
+  border: solid 1px var(--background_color);
+}
+
+.site_header_top {
+    height: auto;
+    padding: 10px;
+    background-color: var(--background_color);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-.Need-Assistance {
+.header_text_needAssistance {
     width: 105px;
     height: 14px;
     font-family: HelveticaNeue;
     font-size: 12px;
     letter-spacing: 0.5px;
-    color: white;
+    color:var(--white);
     margin-left: 50%;
 }
-.A1029087---John-Cars {
-    width: 183px;
-    height: 15px;
+.users {
+    width: auto;
+    height: auto;
     font-family: HelveticaNeue;
     font-size: 12px;
     font-weight: bold;
@@ -25,33 +50,34 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.5px;
-    color: #022737;
+    color: var(--background_color);
   }
 .profile {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: var(--white);
     margin-right: 10%;
+    border-radius: 10px;
 }
 .mail {
     /* width: 20.2px;
     height: 14.9px; */
-    width: 18px;
+    width: 20px;
     height: 18px;
-    border: solid 1px #022737;
-    background-color: white;
+    border: solid 1px var(--background_color);
+    background-color: var(--white);
 }
-.Rectangle-internal_1 {
+#dropdown {
     width: 200px;
     height: 20px;
     border-radius: 10.5px;
-    background-color: white;  
+    background-color: var(--white);  
 }
-  .Rectangle-bottom {
-    width: device-width;
-    height: 80px;
-    border: solid 1px #022737;
-    background-color: white;
+.site_header_bottom {
+    height:auto;
+    padding: 10px;
+    border: solid 1px var(--background_color);
+    background-color: var(--white);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -65,7 +91,7 @@
     object-fit: contain;
     display:inline-block;
 }
-.Text-Style-7 {
+.header_bottom_text {
     font-family: HelveticaNeue;
     font-size: 14px;
     font-weight: bold;
@@ -73,64 +99,93 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.5px;
-    color: #022737;
+    color: var(--background_color);
     display: flex;
 }
-.Text-Style-7:hover{
+.header_bottom_text:hover{
   cursor: pointer;
-  border-bottom: solid 5px #022737;
+  border-bottom: solid 5px var(--background_color);
   transform: scale(1.1);
 }
-/* .acc_para{
-  width: 122px;
-  height: 16px;
+
+.site_body_bottom{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
-.grants_para{
-  width: 49px;
-  height: 16px;
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--button);
+  border: none;
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica;
+  width: 40%;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* margin: 51px 5px 49px 140px;
+  padding: 16px 191px 15px 192px; */
+  margin: 50px 10px;
 }
-.contri_para{
-  width: 97px;
-  height: 16px;
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-.inves_para{
-  width: 85px;
-  height: 16px;
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
-.res_para{
-  width: 71px;
-  height: 16px;
+
+.button:hover span {
+  padding-right: 25px;
 }
-.myacc_para{
-  width: 79px;
-  height: 16px;
-} */
-/* 
-@font-face { font-family: HelveticaNeue; src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed.ttf'); } 
- @font-face { font-family: HelveticaNeue; font-weight: bold; src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed\ Bold.ttf');} */
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
 
 .footer_top{
-  width: device-width;
-  height: 268px;
-  background-color: #022737;
+  height: auto;
+  padding: 25px 0px;
+  background-color: var(--background_color);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
 }
-.sec1 {
+.footer_top_sec1 {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
   margin-left: 10%;
 }
-.top1,.top2{
-  width: 144px;
+ul{
+  list-style-type: none;
+  cursor: pointer;
+}
+.footer_top_ul{
   height: 210px;
   font-family: HelveticaNeue;
   font-size: 12px;
@@ -139,15 +194,15 @@
   font-style: normal;
   line-height: 2.92;
   letter-spacing: 0.5px;
-  color: white;
+  color: var(--white);
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
 }
-.top3{
+.footer_top_sec3{
   margin-right: 10%;
   display: flex;
   justify-content: space-evenly;
@@ -158,9 +213,9 @@
 
 }
 .footer_bottom {
-  width: device-width;
-  height: 139px;
-  background-color: whitesmoke;
+  height: auto;
+  padding: 35px 0px;
+  background-color: var(--white-two);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +227,7 @@
   height: 46px;
   object-fit: contain;
 }
-.char {
+.footer_char {
   width: auto;
   height: auto;
   font-family: HelveticaNeue;
@@ -183,9 +238,9 @@
   line-height: 1.5;
   letter-spacing: normal;
   text-align: center;
-  color: #505050;
+  color: var(--char-color);
 }
-.Subscribe-to-our-New {
+.footer_Subscribe-to-our-New {
   width: 214px;
   height: 18px;
   font-family: BerkeleyStd;
@@ -200,17 +255,5 @@
 .input {
   width: auto;
   height: 40px;
-  background-color: white;
-}
-.Subscribe-to-our-New {
-  width: 214px;
-  height: 18px;
-  font-family: BerkeleyStd;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: 0.5px;
-  color: white;
+  background-color: var(--white);
 }
