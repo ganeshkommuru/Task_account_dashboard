@@ -7,6 +7,8 @@
     <title>Account Dashboard</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="Assets/fonts.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Linden+Hill:regular,italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -16,7 +18,7 @@
                 <option value="A1029087 - John Cars" class="users">A1029087 - John Carson Ec…</option>
                 <option value="user_2" class="users">user_2</option>
                 <option value="user_3" class="users">user_3</option>
-              </select>
+            </select>
             <img class = 'mail' src="Assets/mail.png" alt = "mail">
             <img class="profile" src = 'Assets/profile.jpg' alt = 'profile'>
         </div>
@@ -30,8 +32,67 @@
             <span class="header_bottom_text">MY ACCOUNT</span>
         </div>
     </header>
+    <div class="Line"></div>
+    <div class="product_tour_shape">
+        <span class="PRODUCT-TOUR">PRODUCT TOUR</span>
+    </div>
+
+    <div class="site_body_account_overview">
+        <span class="nav_home">Home   >   Account overview</span>
+        <span class="Account-Overview">Account Overview</span>
+        <span class="text_fund">The Church Fund - A1050919</span>
+        <span class="balance_update">Balances as of 12/12/2012</span>
+    </div>
 
     <div class="site_body_bottom">
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <div>
+        <div class="balance balence_top">
+            <span class="balance_text">Current Balance</span>
+            <span class="balance_money">$120,000</span>
+        </div>
+        <div class="balance">
+            <span class="balance_text">Available Balance</span>
+            <span class="balance_money">$30,000</span>
+            <span class="transaction_summary">View transaction summary</span>
+        </div>
+        </div>
+        <div class="Transactions">
+            <ul class="Transactions_taskbar">
+                <li class="Transactions_taskbar_opt">Grants(1)</li>
+                <li class="Transactions_taskbar_main" >Contributions(1890)</li>
+                <li class="Transactions_taskbar_opt" >Exchange(0)</li>
+                <li class="Transactions_taskbar_opt" >Other Transactions(0)</li>
+                
+                
+            </ul>
+        </div>
+        </div>
+        <!-- <div class="Transactions"></div> -->
+        <div class="body_buttons">
+            <button class="button body_button_params" style="vertical-align:middle"><span>Contribution</span></button>
+            <button class="button body_button_params" style="vertical-align:middle"><span>Grant</span></button>
+            <button class="button body_button_params" style="vertical-align:middle"><span>Exchange</span></button>
+            <select id="dropdown_body" name="select_values">
+                <option value="Manage your account" class="users">Manage your Account</option>
+                <option value="opt_2" class="users">opt_2</option>
+                <option value="opt_3" class="users">opt_3</option>
+            </select>
+        </div>
+        <div class="site_body_bottom_features">
+            <div style="display: flex; flex-direction: column;">
+                <span class="Featured">Featured</span>
+                <span class="Learn-how-to-value-y">Learn how to value your contributions</span>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-around;">
+                <span class="Lorem-ipsum-dolor-s">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud dolore magna ali.</span>
+                <span class="Learn-More">Learn More</span>
+            </div>
+            <img class="featured_img" src="Assets/featured_img.png" alt="featuredImage">
+        </div>
+    </div>
+
+    <div class="site_body_bottom_buttons">
         <button class="button" style="vertical-align:middle"><span>Create Another Fund </span></button>
         <button class="button" style="vertical-align:middle"><span>Invite Intrested Parties </span></button>
     </div>

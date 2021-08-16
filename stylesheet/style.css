@@ -1,11 +1,11 @@
 
-@font-face { font-family: HelveticaNeue; 
+/* @font-face { font-family: HelveticaNeue; 
             src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed.ttf'); 
             } 
 @font-face {
   font-family: BerkeleyStd;
-  src: url(//Assets/BerkeleyStd-Book.otf);
-}
+  src: url(//Assets/BerkeleyStd-Book.otf); 
+}*/
 /* @font-face { font-family: HelveticaNeue; font-weight: bold; src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed\ Bold.ttf');} */
 
 :root {
@@ -16,6 +16,10 @@
   --char-color: #505050;
   --button: #006778;
   --line: #006778;
+  --background-body: #eaeaea;
+  --mos-green: #69923a;
+  --border-taskbar-body: #d9d9d9;
+  --background-taskbar-body: #f1f1f1;
 }
 
 
@@ -34,7 +38,7 @@ body{
 .header_text_needAssistance {
     width: 105px;
     height: 14px;
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeue,'Helvetica Neue',Roboto;
     font-size: 12px;
     letter-spacing: 0.5px;
     color:var(--white);
@@ -43,7 +47,7 @@ body{
 .users {
     width: auto;
     height: auto;
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeue,'Helvetica Neue',Roboto;
     font-size: 12px;
     font-weight: bold;
     font-stretch: normal;
@@ -72,11 +76,34 @@ body{
     height: 20px;
     border-radius: 10.5px;
     background-color: var(--white);  
+    font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: var(--background_color);
+}
+.Line{
+  border-bottom: solid 2px var(--line);
+}
+.product_tour_shape {
+  width: 10%;
+  height: 41px;
+  margin-left: 80%;
+  margin-top: -15px;
+  /*padding: 19px 33px 8px 35px; */
+  border-radius: 17.5px;
+  background-color: #006778;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .site_header_bottom {
     height:auto;
     padding: 10px;
-    border: solid 1px var(--background_color);
+    border-bottom: solid 1px var(--background_color);
     background-color: var(--white);
     display: flex;
     flex-wrap: nowrap;
@@ -92,7 +119,7 @@ body{
     display:inline-block;
 }
 .header_bottom_text {
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeue,'Helvetica Neue',Roboto;
     font-size: 14px;
     font-weight: bold;
     font-stretch: condensed;
@@ -108,12 +135,284 @@ body{
   transform: scale(1.1);
 }
 
-.site_body_bottom{
+.PRODUCT-TOUR {
+  width: max-content;
+  height: 14px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+
+.site_body_account_overview{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: solid 1px var(--background_color);
+}
+
+.nav_home {
+  width: 181px;
+  height: 20px;
+  margin: 37px 0px 50px 10%;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: var(--char-color);
+}
+.Account-Overview {
+  width: 321px;
+  height: 48px;
+  margin-left: 10%;
+  margin-bottom: 15px;
+  font-family: BerkeleyStd,"Linden Hill";
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: 0.5px;
+  color: var(--background_color);
+}
+.text_fund {
+  width: 220px;
+  height: 24px;
+  margin-left: 10%;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #022737;
+}
+.balance_update {
+  width: 192px;
+  height: 24px;
+  margin-left: 10%;
+  margin-bottom: 144px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #505050;
+}
+
+
+.site_body_bottom {
+  padding: 50px 0px;
+  background-color: var(--background-body);
+}
+.balance {
+  width: 100%;
+  height: 172px;
+  margin: 0px 0px 20px 10%;
+  /* padding: 0 113px 67px 30px; */
+  box-shadow: 0 9px 21px 0 rgba(128, 152, 213, 0.08);
+  background-color: var(--white-two);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.balance_text {
+  width: max-content;
+  height: 30px;
+  margin: 20px 0px 5px 30px;
+  font-family: BerkeleyStd,"Linden Hill";
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: #022737;
+}
+.balance_money {
+  width: 176px;
+  height: 50px;
+  margin: 0px 0px 67px 30px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 42px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--mos-green);
+}
+.transaction_summary {
+  width: 209px;
+  height: 19px;
+  margin: 28px 10px 0 30px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #006778;
+  cursor: pointer;
+}
+.Transactions {
+  width: 50%;
+  height: 364px;
+  /* margin: 0 0 30px 20px;
+  padding: 0 0 17px; */
+  box-shadow: 0 9px 21px 0 rgba(128, 152, 213, 0.08);
+  border: solid 1px var(--background-body);
+  background-color: var(--white);
+}
+.Transactions_taskbar{
+  display: flex; 
+  flex-direction: row; 
+  height: 56px;
+  padding: 0px;
+  justify-content: space-evenly;
+  margin: 0px;
+  align-items: center;
+  border: solid 1px var(--border-taskbar-body);
+  background-color: var(--border-taskbar-body);
+  
+}
+.Transactions_taskbar_opt {
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--char-color);
+  background-color: var(--background-taskbar-body);
+  padding: 20px;
+}
+.Transactions_taskbar_main {
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--button);
+}
+
+.body_buttons{
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
+#dropdown_body{
+  width: 20%;
+  height: 50px;
+  margin: 50px 10px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #006778;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+}
+
+.site_body_bottom_buttons{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.site_body_bottom_features {
+  width: 80%;
+  height: 172px;
+  /* margin: 30px 0 0 1px;
+  padding: 0 0 0 20px; */
+  box-shadow: 0 9px 21px 0 rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10%;
+  /* background-image: url(//Assets/featured_img.png); */
+
+}
+.featured_img{
+  height: 172px;
+  object-fit: contain;
+  justify-content: end;
+}
+.Featured {
+  width: 56px;
+  height: 20px;
+  margin: 28px 0px 6px 6.5%;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: var(--char-color);
+}
+.Learn-how-to-value-y {
+  width: 201px;
+  height: 60px;
+  margin: 0px 0px 58px 6.5%;
+  font-family: BerkeleyStd,"Linden Hill";
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: var(--background_color);
+}
+.Lorem-ipsum-dolor-s {
+  width: auto ;
+  height: 48px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--char-color);
+}
+.Learn-More {
+  width: auto;
+  height: 19px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: var(--button);
+  cursor: pointer;
+}
+
 
 .button {
   display: inline-block;
@@ -123,13 +422,11 @@ body{
   color: var(--white);
   text-align: center;
   font-size: 16px;
-  font-family: Helvetica;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   width: 40%;
   height: 50px;
   transition: all 0.5s;
   cursor: pointer;
-  /* margin: 51px 5px 49px 140px;
-  padding: 16px 191px 15px 192px; */
   margin: 50px 10px;
 }
 
@@ -158,7 +455,10 @@ body{
   right: 0;
 }
 
-
+.body_button_params{
+  width:18.5%;
+  height: 50px;
+}
 
 
 .footer_top{
@@ -187,7 +487,7 @@ ul{
 }
 .footer_top_ul{
   height: 210px;
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -230,7 +530,7 @@ ul{
 .footer_char {
   width: auto;
   height: auto;
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -243,7 +543,7 @@ ul{
 .footer_Subscribe-to-our-New {
   width: 214px;
   height: 18px;
-  font-family: BerkeleyStd;
+  font-family: BerkeleyStd,"Linden Hill";
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
