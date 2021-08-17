@@ -25,14 +25,14 @@
 *{
   box-sizing: border-box;
 }
-
+/* 
 body{
   border: solid 1px var(--background_color);
   margin: 0px;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-}
+} */
 
 
 .site_header_top {
