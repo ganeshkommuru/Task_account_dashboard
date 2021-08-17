@@ -1,11 +1,11 @@
 
-/* @font-face { font-family: HelveticaNeue; 
+@font-face { font-family: HelveticaNeue; 
             src: url('../Assets/Fonts/HelveticaNeue-Condensed.ttf'); 
             } 
 @font-face {
   font-family: BerkeleyStd;
   src: url('../Assets/Fonts/BerkeleyStd-Book.otf'); 
-}*/
+}
 /* @font-face { font-family: HelveticaNeue; font-weight: bold; src: url('//Assets/HelveticaNeueCondensed/HelveticaNeue-Condensed\ Bold.ttf');} */
 
 :root {
@@ -29,7 +29,11 @@
 body{
   border: solid 1px var(--background_color);
   margin: 0px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
+
 
 .site_header_top {
     height: auto;
@@ -38,8 +42,9 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-right: 10%;
   }
-.header_text_needAssistance {
+.header_text_needAssistance{
     width: 105px;
     height: 14px;
     font-family: HelveticaNeue,'Helvetica Neue',Roboto;
@@ -47,6 +52,7 @@ body{
     letter-spacing: 0.5px;
     color:var(--white);
     margin-left: 50%;
+    text-decoration: none;
 }
 .users {
     width: auto;
@@ -111,7 +117,7 @@ body{
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    padding: 10px 60px 10px 120px;
+    padding: 0px 60px 0px 120px;
 }
 .logo {
     width: 143px;
@@ -124,8 +130,10 @@ body{
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
-.header_bottom_text {
+.header_bottom_text a {
     font-family: HelveticaNeue,'Helvetica Neue',Roboto;
     font-size: 14px;
     font-weight: bold;
@@ -135,15 +143,16 @@ body{
     letter-spacing: 0.5px;
     color: var(--background_color);
     display: flex;
-    margin: 0px 10px;
+    margin: 0px 25px;
+    padding: 30px 0px;
+    text-decoration: none;
 }
 .header_bottom_text:hover{
   cursor: pointer;
   border-bottom: solid 5px var(--background_color);
-  transform: scale(1.1);
 }
 
-.PRODUCT-TOUR {
+.product_tour_text {
   width: max-content;
   height: 14px;
   font-family: HelveticaNeue,'Helvetica Neue',Roboto;
@@ -226,6 +235,9 @@ body{
   padding: 50px 0px;
   background-color: var(--background-body);
 }
+.balence_wrapper{
+  display: flex; flex-direction: row; justify-content: space-evenly;
+}
 .balance {
   width: 100%;
   height: 172px;
@@ -299,7 +311,7 @@ body{
   background-color: var(--border-taskbar-body);
   
 }
-.Transactions_taskbar_opt {
+.Transactions_taskbar_opt a {
   font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   font-size: 16px;
   font-weight: bold;
@@ -308,8 +320,9 @@ body{
   line-height: 1;
   letter-spacing: 0.5px;
   color: var(--char-color);
+  text-decoration: none;
 }
-.Transactions_taskbar_main {
+.Transactions_taskbar_main a {
   font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   font-size: 16px;
   font-weight: bold;
@@ -318,6 +331,10 @@ body{
   line-height: 1;
   letter-spacing: 0.5px;
   color: var(--button);
+  padding: 20px;
+  background-color: var(--white);
+  border-top: solid 4px var(--button);
+  text-decoration: none;
 }
 .text_wrapper_body{
   display: flex;
@@ -337,6 +354,7 @@ body{
   color: var(--line);
   border-bottom-width: 2px;
   border-bottom-style: solid;
+  text-decoration: none;
 }
 .Vanguard-New-JerseyDisclamer {
   width: 491px;
@@ -391,7 +409,7 @@ hr{
   opacity: 0.9;
   border: solid 2px #d4d4d4;
 }
-.View-Contribution {
+.View-Contribution a {
   width: 205px;
   height: 19px;
   margin: 0 0px 0 30px;
@@ -403,6 +421,7 @@ hr{
   line-height: normal;
   letter-spacing: 0.5px;
   color: var(--button);
+  text-decoration: none;
 }
 .body_buttons{
   display: flex;
@@ -443,13 +462,46 @@ hr{
   display: flex;
   flex-direction: row;
   margin: 0px 10%;
-  /* background-image: url(//Assets/featured_img.png); */
-
+  /* background-image: url('../Assets/images/featured_img.png');
+  background-position: right;
+  object-fit: contain; */
 }
 .featured_img{
   height: 172px;
   object-fit: contain;
   justify-content: end;
+}
+.lbutton {
+  width: 27px;
+  height: 27px;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 50%;
+}   
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-angle-left:before {
+  content: "<";
+}
+.rbutton {
+  width: 27px;
+  height: 27px;
+  margin-top: 60px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.fa-angle-right:before {
+  content: ">";
 }
 .Featured {
   width: 56px;
@@ -463,6 +515,13 @@ hr{
   line-height: 1.43;
   letter-spacing: normal;
   color: var(--char-color);
+}
+.content_wrapper_left_features{
+  display: flex; flex-direction: column;
+}
+.content_wrapper_features{
+  display: flex; flex-direction: column; justify-content: space-evenly;
+  padding-left: 40px;
 }
 .Learn-how-to-value-y {
   width: 201px;
@@ -518,6 +577,7 @@ hr{
   transition: all 0.5s;
   cursor: pointer;
   margin: 50px 10px;
+  vertical-align:middle
 }
 
 .button span {
@@ -575,8 +635,7 @@ ul{
   list-style-type: none;
   cursor: pointer;
 }
-.footer_top_ul{
-  height: 210px;
+.footer_top_ul a {
   font-family: HelveticaNeue,'Helvetica Neue',Roboto;
   font-size: 12px;
   font-weight: normal;
@@ -590,6 +649,7 @@ ul{
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
+  text-decoration: none;
   align-content: flex-start;
 }
 .footer_top_sec3{
@@ -615,6 +675,21 @@ ul{
   align-items: center;
   align-content: center;
   flex-direction: column;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: var(--button);
+  outline: none;
+  cursor: pointer;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAX0lEQVRYhe3VuwmAQBRE0cXYLizMWDSwZCvZa6CbCYKoz889DcwMD3ZTkqSvARqgjQqvgQnIQBdVYlwLZGCwxPtKcJ3NEtXps3f23Zu2nKCs7w3/RfgjnuK4z0iSjpgBs4UAAxFbjNQAAAAASUVORK5CYII=);
+  background-size: cover;
+}
+.input_container{
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
 }
 .footer_bottom_logo {
   width: 162px;
@@ -665,4 +740,5 @@ ul{
   width: auto;
   height: 40px;
   background-color: var(--white);
+  margin: 0px;
 }
