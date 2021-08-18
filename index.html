@@ -9,44 +9,47 @@
     <!-- <link rel="stylesheet" type="text/css" href="Assets/fonts.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Linden+Hill:regular,italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <section class="site_header_top">
-            <a href="#" class="header_text_needAssistance" >Need Assistance?</a>
-            <select id="dropdown" name="select_values">
-                <option value="A1029087 - John Cars" class="users">A1029087 - John Carson Ec…</option>
-                <option value="user_2" class="users">user_2</option>
-                <option value="user_3" class="users">user_3</option>
-            </select>
-            <a href="#" ><span class="mail">&#9993;</span></a>
-            <a href="#" ><img class="profile" src = 'Assets/images/profile.jpg' alt = 'profile'></a>
-        </section>
-        <section class="site_header_bottom">
+        <div class="h_top">
+            <div class="h_wrapper">Need Assistance?</div>
+            <div class="dropdown_div">
+                <select class="dropdown" name="select_values">
+                    <option value="A1029087 - John Cars" class="users_select">A1029087 - John Carson Ec…</option>
+                    <option value="user_2" class="users_select">user_2</option>
+                    <option value="user_3" class="users_select">user_3</option>
+                </select>
+            </div>
+            <div class="mail"><i class="fa fa-envelope"></i></div>
+            <div class="profile"><i class="fa fa-user-circle"></i></div>
+        </div>
+        <section class="h_bottom">
             <img class= 'logo' src="Assets/images/logo.png" alt = 'logo'>
-            <ul class="header_bottom_links">
-                <li class="header_bottom_text"> <a href="#">ACCOUNT SUMMARY</a></li>
-                <li class="header_bottom_text"> <a href="#">GRANTS</a></li>
-                <li class="header_bottom_text"> <a href="#">CONTRIBUTIONS</a></li>
-                <li class="header_bottom_text"> <a href="#">INVESTMENTS</a></li>
-                <li class="header_bottom_text"> <a href="#">RESOURCES</a></li>
-                <li class="header_bottom_text"> <a href="#">MY ACCOUNT</a></li>
+            <ul class="h_b_links">
+                <li> <a href="#">ACCOUNT SUMMARY</a></li>
+                <li> <a href="#">GRANTS</a></li>
+                <li> <a href="#">CONTRIBUTIONS</a></li>
+                <li> <a href="#">INVESTMENTS</a></li>
+                <li> <a href="#">RESOURCES</a></li>
+                <li> <a href="#">MY ACCOUNT</a></li>
             </ul>
         </section>
     </header>
     <main>
-        <section class="product_tour_shape">
-            <span class="product_tour_text">PRODUCT TOUR</span>
+        <section class="m_top_wrapper">
+            <span class="m_t_text">PRODUCT TOUR</span>
         </section>
 
-        <section class="site_body_account_overview">
+        <section class="m_account_overview">
             <span class="nav_home">Home   >   Account overview</span>
-            <span class="Account-Overview">Account Overview</span>
+            <span class="m_acc_text">Account Overview</span>
             <span class="text_fund">The Church Fund - A1050919</span>
             <span class="balance_update">Balances as of 12/12/2012</span>
         </section>
 
-        <section class="site_body_bottom">
+        <section class="m_bottom">
             <div class="balence_wrapper">
             <div>
             <div class="balance balence_top">
@@ -59,85 +62,85 @@
                 <span class="transaction_summary">View transaction summary</span>
             </div>
             </div>
-            <div class="Transactions">
-                <ul class="Transactions_taskbar">
-                    <li class="Transactions_taskbar_opt"> <a href="#">Grants(1)</a></li>
-                    <li class="Transactions_taskbar_main" > <a href="#">Contributions(1890)</a></li>
-                    <li class="Transactions_taskbar_opt" > <a href="#">Exchange(0)</a></li>
-                    <li class="Transactions_taskbar_opt" > <a href="#">Other Transactions(0)</a></li>
+            <div class="transactions">
+                <ul class="transactions_taskbar">
+                    <li class="taskbar_opt"> <a href="#">Grants(1)</a></li>
+                    <li class="taskbar_main" > <a href="#">Contributions(1890)</a></li>
+                    <li class="taskbar_opt" > <a href="#">Exchange(0)</a></li>
+                    <li class="taskbar_opt" > <a href="#">Other Transactions(0)</a></li>
                     
                     
                 </ul>
-                <div class="text_wrapper_body">
-                    <a class="Gift-ID" href="#">Gift ID: 4436109</a>
-                    <span class="Vanguard-New-JerseyDisclamer">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</span>
+                <div class="m_side_wrapper">
+                    <a class="gift_id" href="#">Gift ID: 4436109</a>
+                    <span class="m_disclamer">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</span>
                 </div>
                 <div class="option_wrapper_body">
-                    <ul class="property_body">
-                        <li class="property_list_ele">Entered Date</li>
-                        <li class="property_list_ele" >Received Date</li>
-                        <li class="property_list_ele" >Number of Shares</li>
+                    <ul class="m_properties">
+                        <li>Entered Date</li>
+                        <li>Received Date</li>
+                        <li>Number of Shares</li>
                     </ul>
-                    <ul class="property_values_body">
-                        <li class="property_list_ele" >10/04/2019</li>
-                        <li class="property_list_ele" >10/04/2019</li>
-                        <li class="property_list_ele" >50</li>
+                    <ul class="m_property_values">
+                        <li>10/04/2019</li>
+                        <li>10/04/2019</li>
+                        <li>50</li>
                     </ul>
-                    <ul class="property_body">
-                        <li class="property_list_ele" >Type</li>
-                        <li class="property_list_ele" >Amount</li>
-                        <li class="property_list_ele" >Status</li>
+                    <ul class="m_properties">
+                        <li>Type</li>
+                        <li>Amount</li>
+                        <li>Status</li>
                     </ul>
-                    <ul class="property_values_body">
-                        <li class="property_list_ele" >VBS Security</li>
-                        <li class="property_list_ele" >$50,000.00</li>
-                        <li class="property_list_ele" >Entered</li>
+                    <ul class="m_property_values">
+                        <li>VBS Security</li>
+                        <li>$50,000.00</li>
+                        <li>Entered</li>
                     </ul>
                 </div>
-                <div class="body_activity_seperator"><hr>
-                    <span class="View-Contribution"> <a href="#">View Contribution Activity</a></span>
+                <div class="m_seperator"><hr>
+                    <span class="view_contribution"> <a href="#">View Contribution Activity</a></span>
                 </div>
             </div>
             </div>
             <div class="body_buttons">
-                <button class="button body_button_params" ><span>Contribution</span></button>
-                <button class="button body_button_params" ><span>Grant</span></button>
-                <button class="button body_button_params" ><span>Exchange</span></button>
+                <button class="button" ><span>Contribution</span></button>
+                <button class="button" ><span>Grant</span></button>
+                <button class="button" ><span>Exchange</span></button>
                 <select id="dropdown_body" name="select_values">
-                    <option value="Manage your account" class="users">Manage your Account</option>
-                    <option value="opt_2" class="users">opt_2</option>
-                    <option value="opt_3" class="users">opt_3</option>
+                    <option value="Manage your account">Manage your Account</option>
+                    <option value="opt_2">opt_2</option>
+                    <option value="opt_3">opt_3</option>
                 </select>
             </div>
-            <div class="site_body_bottom_features">
+            <div class="m_b_features">
                 <button class="lbutton"><i class="fa fa-angle-left"></i></button>
-                <div class='content_wrapper_left_features'>
-                    <span class="Featured">Featured</span>
-                    <span class="Learn-how-to-value-y">Learn how to value your contributions</span>
+                <div class='features_left'>
+                    <span class="featured">Featured</span>
+                    <span class="contributions">Learn how to value your contributions</span>
                 </div>
-                <div class="content_wrapper_features">
-                    <span class="Lorem-ipsum-dolor-s">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </span>
-                    <span class="Learn-More">Learn More</span>
+                <div class="f_text_wrapper">
+                    <span class="lorem_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </span>
+                    <span class="learn_more">Learn More</span>
                 </div>
                 <img class="featured_img" src="Assets/images/featured_img.png" alt="featuredImage">
                 <button class="rbutton"><i class="fa fa-angle-right"></i></button>
             </div>
         </section>
 
-        <section class="site_body_bottom_buttons">
+        <section class="m_b_buttons">
             <button class="button" ><span>Create Another Fund </span></button>
             <button class="button"><span>Invite Intrested Parties </span></button>
         </section>
     </main>
     <footer>
-        <section class="footer_top">
-            <div class="footer_top_sec1">
-                <img class= 'logo' src="Assets/images/logo.png" alt = 'logo'>
-                <span class="footer_char">Follow us on LinkedIn</span>
-                <span class="footer_char">© 2019 Vanguard Charitable Endowment Program</span>
+        <section class="f_top">
+            <div class="f_top_sec1">
+                <img class= 'logo' src="Assets/images/logo_footer.png" alt = 'logo'>
+                <span class="f_char lin">Follow us on LinkedIn</span>
+                <span class="f_char">© 2019 Vanguard Charitable Endowment Program</span>
             </div>
-            <div class="footer_links">
-                <ul class="footer_top_ul">
+            <div class="f_links">
+                <ul class="f_top_ul">
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">FAQs</a></li>
@@ -145,7 +148,7 @@
                     <li><a href="#">Giving Matters Blog</a></li>
                     <li><a href="#">News and Events</a></li>
                 </ul>
-                <ul class='footer_top_ul'>
+                <ul class='f_top_ul'>
                     <li><a href="#">Sitemap</a></li>
                     <li><a href="#">Froms</a></li>
                     <li><a href="#">Request Literature</a></li>
@@ -154,20 +157,20 @@
                     <li><a href="#">Company Policies</a></li>
                 </ul>
             </div>
-            <div class = "footer_top_sec3">
+            <div class = "f_t_sec3">
                 <div>
-                <span class="footer_Subscribe-to-our-New">Subscribe to our Newsletter</span>
+                <span class="f_subscription">Subscribe to our Newsletter</span>
                 <div class="input_container">
-                    <input type="email" class= "footer_top_sec3 input" name="email" placeholder="Enter your email address">
+                    <input type="email" class= "f_t_sec3 input" name="email" placeholder="Enter your email address">
                     <button class="arrow"></button>
             
                 </div>
                 </div>
             </div>
         </section>
-        <section class="footer_bottom">
-            <img class="footer_bottom_logo" src="Assets/images/footer_bottom_logo.png" alt="vangard">
-            <span class="footer_disclamer">© 2019 Vanguard Charitable Endowment Program. VANGUARD and the Vanguard Ship Logo are trademarks of The Vanguard Group, Inc.</span>
+        <section class="f_bottom">
+            <img class="f_b_logo" src="Assets/images/footer_bottom_logo.png" alt="vangard">
+            <span class="f_disclamer">© 2019 Vanguard Charitable Endowment Program. VANGUARD and the Vanguard Ship Logo are trademarks of The Vanguard Group, Inc.</span>
         </section>
     </footer>
 </body>
