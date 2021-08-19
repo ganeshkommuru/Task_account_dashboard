@@ -27,13 +27,15 @@
         </div>
         <section class="h_bottom">
             <img class= 'logo' src="Assets/images/logo.png" alt = 'logo'>
-            <ul class="h_b_links">
+            <ul class="h_b_links" id ="h_b_links_id">
                 <li> <a href="#">ACCOUNT SUMMARY</a></li>
                 <li> <a href="#">GRANTS</a></li>
                 <li> <a href="#">CONTRIBUTIONS</a></li>
                 <li> <a href="#">INVESTMENTS</a></li>
                 <li> <a href="#">RESOURCES</a></li>
                 <li> <a href="#">MY ACCOUNT</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i></a></li>
             </ul>
         </section>
     </header>
@@ -103,7 +105,7 @@
             </div>
             </div>
             <div class="body_buttons">
-                <button class="button" ><span>Contribution</span></button>
+                <button class="button but_cont" ><span>Contribution</span></button>
                 <button class="button" ><span>Grant</span></button>
                 <button class="button" ><span>Exchange</span></button>
                 <select id="dropdown_body" name="select_values">
@@ -135,12 +137,12 @@
     <footer>
         <section class="f_top">
             <div class="f_top_sec1">
-                <img class= 'logo' src="Assets/images/logo_footer.png" alt = 'logo'>
+                <img class= 'logo f_top_s1_img' src="Assets/images/logo_footer.png" alt = 'logo'>
                 <span class="f_char lin">Follow us on LinkedIn</span>
                 <span class="f_char">© 2019 Vanguard Charitable Endowment Program</span>
             </div>
             <div class="f_links">
-                <ul class="f_top_ul">
+                <ul class="f_top_ul m_ul">
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">FAQs</a></li>
@@ -173,5 +175,6 @@
             <span class="f_disclamer">© 2019 Vanguard Charitable Endowment Program. VANGUARD and the Vanguard Ship Logo are trademarks of The Vanguard Group, Inc.</span>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
