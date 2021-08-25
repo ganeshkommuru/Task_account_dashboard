@@ -20,6 +20,8 @@
   --mos-green: #69923a;
   --border-taskbar-body: #d9d9d9;
   --background-taskbar-body: #f1f1f1;
+  --text-light: #b6bdbd;
+  --red: rgb(255,0,0);
 }
 
 *{
@@ -64,6 +66,7 @@ a{
     color:var(--white);
     text-decoration: none;
     flex: 12%;
+    cursor: pointer;
 }
 .dropdown_div{
   flex:26%;
@@ -116,7 +119,65 @@ a{
     flex: 0;
   }
 }
-
+.form_popup{
+  height: 100vh;
+  background-color: var(--white);
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: none;
+  z-index: 1;
+  transition: 0.5s;
+  top: 0;
+  padding: 30px 80px;
+  overflow: auto;
+}
+.form_need{
+  font-size: 40px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+}
+.form_text{
+  font-size: 14px;
+  font-family: HelveticaNeue'Helvetica Neue',Roboto;
+  color: var(--text-light);
+}
+.faq{
+  font-size: 14px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: var(--line);
+}
+.form_container *{
+  margin: 30px 0px;
+}
+.form_container input{
+  width: 200px;
+  height: 40px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+.form_container label{
+  font-size: 20px;
+  font-family: HelveticaNeue,'Helvetica Neue',Roboto;
+  color: var(--text-light);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.0px;
+}
+.form_container button{
+  margin: 30px 0px;
+}
+.required{
+  color: var(--red);
+  font-weight: normal;
+}
 .h_bottom {
     height:auto;
     border-bottom: solid 2px var(--line);
@@ -142,6 +203,7 @@ a{
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+  color: white;
 }
 .h_b_links li a {
   font-family: HelveticaNeue,'Helvetica Neue',Roboto;
@@ -162,14 +224,24 @@ a{
   cursor: pointer;
   border-bottom: solid 5px var(--background_color);
 }
-.h_b_links li .icon{
+.icon{
   display: none;
+  color: var(--background_color);
 } 
+#h_b_links_id > li:nth-child(7) > a{
+  display: none;
+}
 @media (max-width: 800px) {
-  .h_b_links :not(:first-child) {display: none;}
-  .h_b_links li .icon {
+  .h_b_links  {display: none;}
+  .icon {
     float: right;
     display: block;
+  }
+  #h_b_links_id > li:nth-child(7) > a{
+    display: block;
+  }
+  .form_popup{
+    width: 100%;
   }
 }
 

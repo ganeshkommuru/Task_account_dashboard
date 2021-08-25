@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="h_top">
-            <div class="h_wrapper">Need Assistance?</div>
+            <div class="h_wrapper" onclick="openForm()">Need Assistance?</div>
             <div class="dropdown_div">
                 <select class="dropdown" name="select_values">
                     <option value="A1029087 - John Cars" class="users_select">A1029087 - John Carson Ec…</option>
@@ -27,17 +27,38 @@
         </div>
         <nav class="h_bottom">
             <img class= 'logo' src="Assets/images/logo.png" alt = 'logo'>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars" id="toggle_icon"></i></a>
             <ul class="h_b_links" id ="h_b_links_id">
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i></a></li>
+                <!-- <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars" id="toggle_icon"></i></a></li> -->
                 <li> <a href="#">ACCOUNT SUMMARY</a></li>
                 <li> <a href="#">GRANTS</a></li>
                 <li> <a href="#">CONTRIBUTIONS</a></li>
                 <li> <a href="#">INVESTMENTS</a></li>
                 <li> <a href="#">RESOURCES</a></li>
                 <li> <a href="#">MY ACCOUNT</a></li>
+                <li> <a onclick="openForm()" class="links_need">Need Assistance?</a></li>
             </ul>
         </nav>
+        <div class="form_popup" id='form_popup'>
+            <i class="fa fa-2x fa-window-close" onclick="closeForm()"></i>
+            <p class="form_need">Need Assistance?</p>
+            <p class="form_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quibusdam, dolorum vel, dignissimos ratione possimus inventore harum repellat totam culpa sed minus aperiam rem ducimus voluptatibus cum earum labore tempore.</p>
+            <a href="#" class='faq'>For answers to other common questions click here to go to our FAQ section.</a>
+            <form class="form_container">
+                <p>Seeking Assistance for <span class="faq">A1029087-John Carason</span></p>
+                <label for="name">Name: <span class="required">*</span></label><br>
+                <input type="text" name="name" id="name" min="5" placeholder="Enter your name" required><br>
+                <label for="email">Email: <span class="required">*</span></label><br>
+                <input type="email" name="email" id="email" min="5" placeholder="Enter your mail id" required><br>
+                <label for="query">Query: <span class="required">*</span></label><br>
+                <textarea name="query" id="query" rows="20" cols="40" minlength="10" placeholder="Enter your query" required>
+                </textarea><br>
+                <button type="submit" class="button">send</button>
+                <p>Required <span class="required">*</span></p>
+            </form>
+        </div>
     </header>
     <main>
         <section class="m_top_wrapper">
